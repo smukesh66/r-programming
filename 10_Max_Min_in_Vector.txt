@@ -1,0 +1,10 @@
+# Input: A vector of numeric values
+vector <- c(12, 34, 56, 78, 90, 23, 45, 67)
+
+# Find the maximum and minimum values in the vector
+max_value <- max(vector)
+min_value <- min(vector)
+
+# Print the maximum and minimum values
+cat("Maximum value in the vector: ", max_value, "\n")
+cat("Minimum value in the vector: ", min_value, "\n")

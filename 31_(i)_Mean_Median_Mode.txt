@@ -1,0 +1,19 @@
+values <- c(90, 50, 70, 80, 70, 60, 20, 30, 80, 90, 20)
+
+# (i) Compute the mean
+mean_value <- mean(values)
+
+# (i) Compute the median
+median_value <- median(values)
+
+# (i) Compute the mode (using the 'Mode' function)
+Mode <- function(x) {
+  ux <- unique(x)
+  ux[which.max(tabulate(match(x, ux)))]
+}
+mode_value <- Mode(values)
+
+# Print the results
+cat("(i) Mean: ", mean_value, "\n")
+cat("(i) Median: ", median_value, "\n")
+cat("(i) Mode: ", mode_value, "\n")

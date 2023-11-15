@@ -1,0 +1,12 @@
+# Create two vectors as input
+vector1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vector2 <- c(10, 11, 12, 13, 14, 15, 16, 17, 18)
+
+# Combine the vectors into a single data frame
+data_frame <- data.frame(vector1, vector2)
+
+# Convert the data frame to an array with dimensions (3, 3, 2)
+my_array <- array(data_frame, dim = c(3, 3, 2))
+
+# Print the array
+print(my_array)

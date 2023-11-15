@@ -1,0 +1,8 @@
+# Input: Provide the path to the CSV file
+csv_file_path <- "your_csv_file.csv"
+
+# Read the CSV file
+data <- read.csv(file = csv_file_path, header = TRUE, sep = ",")
+
+# Display the content of the CSV file
+print(data)

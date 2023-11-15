@@ -1,0 +1,26 @@
+# Load necessary libraries
+library(caTools)
+library(caret)
+library(nnet)
+
+# Load the Iris dataset
+data(iris)
+
+# Set a seed for reproducibility
+set.seed(123)
+
+# Randomly split the data into 80% training and 20% test
+split <- sample.split(iris$Species, SplitRatio = 0.8)
+train_data <- subset(iris, split == TRUE)
+test_data <- subset(iris, split == FALSE)
+
+# Create a logistic regression model
+model <- multinom(Species ~ Petal.Length + Petal.Width, data = train_data)
+
+# Predict the probability using the test data
+predictions <- predict(model, test_data, "probs")
+
+# Create a confusion matrix
+confusion_matrix <- confusionMatrix(data = predictions, reference = test_data$Species)
+print("Confusion Matrix:")
+print(confusion_matrix)

@@ -1,0 +1,10 @@
+# Create a random sample of the LETTERS dataset as a factor
+set.seed(123)  # Set a seed for reproducibility
+letters_sample <- sample(LETTERS, 20, replace = TRUE)
+letters_factor <- factor(letters_sample)
+
+# Extract the first five levels of the factor
+first_five_levels <- levels(letters_factor)[1:5]
+
+# Print the first five levels
+print(first_five_levels)

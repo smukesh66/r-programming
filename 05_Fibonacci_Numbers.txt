@@ -1,0 +1,21 @@
+# Function to generate the first n Fibonacci numbers
+generate_fibonacci <- function(n) {
+  fibonacci_sequence <- numeric(n)
+  if (n >= 1) {
+    fibonacci_sequence[1] <- 0
+  }
+  if (n >= 2) {
+    fibonacci_sequence[2] <- 1
+  }
+  for (i in 3:n) {
+    fibonacci_sequence[i] <- fibonacci_sequence[i - 1] + fibonacci_sequence[i - 2]
+  }
+  return(fibonacci_sequence)
+}
+
+# Generate the first 10 Fibonacci numbers
+n <- 10
+fibonacci_numbers <- generate_fibonacci(n)
+
+# Print the Fibonacci numbers
+cat("First", n, "Fibonacci Numbers:", fibonacci_numbers, "\n")

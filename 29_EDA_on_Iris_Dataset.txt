@@ -1,0 +1,44 @@
+# Load the Iris dataset
+data(iris)
+
+# (i) Find dimension, Structure, Summary statistics, Standard Deviation of all features.
+cat("Dimension of the dataset:\n")
+print(dim(iris))
+
+cat("\nStructure of the dataset:\n")
+str(iris)
+
+cat("\nSummary statistics of all features:\n")
+summary(iris)
+
+cat("\nStandard Deviation of all features:\n")
+sapply(iris[, 1:4], sd)
+
+# (ii) Find mean and standard deviation of features grouped by three species of Iris flowers
+species_grouped <- aggregate(. ~ Species, data = iris, FUN = function(x) c(Mean = mean(x), SD = sd(x)))
+print(species_grouped)
+
+# (iii) Find quantile value of sepal width and length
+cat("\nQuantile values of Sepal.Width:\n")
+quantile(iris$Sepal.Width)
+
+cat("\nQuantile values of Sepal.Length:\n")
+quantile(iris$Sepal.Length)
+
+# (iv) Create a new data frame named iris1 with a new column named Sepal.Length.Cate
+# that categorizes "Sepal.Length" by quantile
+iris1 <- iris
+iris1$Sepal.Length.Cate <- cut(iris1$Sepal.Length, breaks = quantile(iris1$Sepal.Length), labels = FALSE)
+print(head(iris1))
+
+# (v) Average value of numerical variables by two categorical variables: Species and Sepal.Length.Cate
+avg_by_species_length_cate <- aggregate(. ~ Species + Sepal.Length.Cate, data = iris1, FUN = mean)
+print(avg_by_species_length_cate)
+
+# (vi) Average mean value of numerical variables by Species and Sepal.Length.Cate
+avg_mean_by_species_length_cate <- aggregate(. ~ Species + Sepal.Length.Cate, data = iris1, FUN = function(x) mean(x))
+print(avg_mean_by_species_length_cate)
+
+# (vii) Create a Pivot Table based on Species and Sepal.Length.Cate
+pivot_table <- xtabs(Petal.Length ~ Species + Sepal.Length.Cate, data = iris1)
+print(pivot_table)

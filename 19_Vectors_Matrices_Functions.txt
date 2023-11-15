@@ -1,0 +1,16 @@
+# Create vectors, matrices, and a function
+vector_a <- c(1, 2, 3, 4, 5)
+matrix_b <- matrix(1:9, nrow = 3)
+function_c <- function(x) {
+  return(x^2)
+}
+
+# Create a list containing the elements
+my_list <- list(
+  vector = vector_a,
+  matrix = matrix_b,
+  function = function_c
+)
+
+# Print the content of the list
+print(my_list)

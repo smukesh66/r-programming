@@ -1,0 +1,6 @@
+# Set the limits for the x and y axes
+x_limits <- c(0, 10)
+y_limits <- c(0, 20)
+
+# Create an empty plot with specified axes limits
+plot(1, type = "n", xlim = x_limits, ylim = y_limits, xlab = "X-Axis Label", ylab = "Y-Axis Label", main = "Empty Plot with Axes Limits")

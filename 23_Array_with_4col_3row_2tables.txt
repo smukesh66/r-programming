@@ -1,0 +1,14 @@
+# Create four vectors for the columns
+col1 <- c(1, 2, 3)
+col2 <- c(4, 5, 6)
+col3 <- c(7, 8, 9)
+col4 <- c(10, 11, 12)
+
+# Combine the vectors into a data frame
+data_frame <- data.frame(Column1 = col1, Column2 = col2, Column3 = col3, Column4 = col4)
+
+# Convert the data frame into a 3x4x2 array
+my_array <- array(data_frame, dim = c(3, 4, 2))
+
+# Print the content of the array
+print(my_array)

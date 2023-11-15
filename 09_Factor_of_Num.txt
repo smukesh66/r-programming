@@ -1,0 +1,15 @@
+# Input: The number for which you want to find the factors
+num <- as.integer(readline("Enter a number: "))
+
+# Initialize an empty vector to store factors
+factors <- c()
+
+# Find factors of the given number
+for (i in 1:num) {
+  if (num %% i == 0) {
+    factors <- c(factors, i)
+  }
+}
+
+# Print the factors
+cat("Factors of", num, "are:", factors, "\n")

@@ -1,0 +1,19 @@
+# Load the built-in "airquality" dataset
+data(airquality)
+
+# Check if "airquality" is a data frame
+is_dataframe <- is.data.frame(airquality)
+
+# If it is a data frame, proceed with the operations
+if (is_dataframe) {
+  # Order the data frame by the first and second columns (Ozone and Solar.R)
+  airquality <- airquality[order(airquality$Ozone, airquality$Solar.R), ]
+
+  # Remove the 'Solar.R' and 'Wind' variables
+  airquality <- airquality[, -c("Solar.R", "Wind")]
+  
+  # Display the updated data frame
+  print(airquality)
+} else {
+  print("The 'airquality' dataset is not a data frame.")
+}

@@ -1,0 +1,10 @@
+# Create three example arrays (you can replace these with your own arrays)
+array1 <- array(1:12, dim = c(2, 2, 3))
+array2 <- array(13:24, dim = c(2, 2, 3))
+array3 <- array(25:36, dim = c(2, 2, 3))
+
+# Combine the three arrays with the first row concatenation
+combined_array <- array(c(array1[1,,], array2[1,,], array3[1,,]), dim = c(3, 2, 3))
+
+# Print the combined array
+print(combined_array)

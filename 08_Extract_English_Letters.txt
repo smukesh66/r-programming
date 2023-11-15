@@ -1,0 +1,17 @@
+# Input string
+input_string <- "This is an example string that we will use."
+
+# Extract the first 10 English letters in lowercase
+first_10_lowercase <- tolower(substr(input_string, 1, 10))
+
+# Extract the last 10 letters in uppercase
+n <- nchar(input_string)
+last_10_uppercase <- toupper(substr(input_string, n - 9, n))
+
+# Extract letters between 22nd to 24th positions in uppercase
+letters_between_22_24_uppercase <- toupper(substr(input_string, 22, 24))
+
+# Print the results
+cat("First 10 English letters in lowercase: ", first_10_lowercase, "\n")
+cat("Last 10 letters in uppercase: ", last_10_uppercase, "\n")
+cat("Letters between 22nd to 24th in uppercase: ", letters_between_22_24_uppercase, "\n")

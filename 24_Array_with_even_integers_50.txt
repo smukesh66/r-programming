@@ -1,0 +1,5 @@
+# Create a 5x3 array of even integers greater than 50
+even_integers_array <- matrix(seq(52, 76, by = 2), nrow = 5, ncol = 3, byrow = TRUE)
+
+# Print the array
+print(even_integers_array)

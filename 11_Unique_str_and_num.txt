@@ -1,0 +1,18 @@
+# Input: A string
+input_string <- "programming"
+
+# Get unique elements of the string
+unique_characters <- unique(strsplit(input_string, "")[[1]])
+
+# Print the unique elements
+cat("Unique characters in the string: ", paste(unique_characters, collapse = ""), "\n")
+
+# Input: A vector of numbers
+input_vector <- c(3, 7, 2, 3, 5, 7, 2, 9, 1, 7, 4)
+
+# Get unique numbers from the vector
+unique_numbers <- unique(input_vector)
+
+# Print the unique numbers
+cat("Unique numbers in the vector: ", unique_numbers, "\n")
+

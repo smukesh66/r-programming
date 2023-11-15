@@ -1,0 +1,18 @@
+# Create a vector of numeric data
+numeric_vector <- c(1.1, 2.2, 3.3, 4.4, 5.5)
+
+# Create a vector of character data
+character_vector <- c("apple", "banana", "cherry", "date", "elderberry")
+
+# Create a vector of logical data
+logical_vector <- c(TRUE, FALSE, TRUE, TRUE, FALSE)
+
+# Display the content of the vectors and their data types
+cat("Numeric Vector:", numeric_vector, "\n")
+cat("Data Type:", class(numeric_vector), "\n\n")
+
+cat("Character Vector:", character_vector, "\n")
+cat("Data Type:", class(character_vector), "\n\n")
+
+cat("Logical Vector:", logical_vector, "\n")
+cat("Data Type:", class(logical_vector), "\n")

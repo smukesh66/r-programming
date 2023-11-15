@@ -1,0 +1,8 @@
+# Load the built-in "women" dataset
+data(women)
+
+# Create a factor for height
+height_factor <- factor(women$height)
+
+# Display the levels of the factor
+levels(height_factor)

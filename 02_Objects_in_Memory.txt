@@ -1,0 +1,17 @@
+# Get the names of objects in memory
+object_names <- ls()
+
+# Initialize a list to store object details
+object_details <- list()
+
+# Iterate through each object and get its size
+for (object_name in object_names) {
+  object_size <- object.size(get(object_name))
+  object_details[[object_name]] <- object_size
+}
+
+# Print object details
+cat("Objects in Memory:\n")
+for (object_name in object_names) {
+  cat(object_name, ": ", object_details[[object_name]], " bytes\n")
+}
